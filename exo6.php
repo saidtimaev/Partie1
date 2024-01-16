@@ -10,7 +10,14 @@ d’articles, son prix hors taxe et un taux de TVA (exprimé en décimal. Ex : 2
 </p> 
 
 <?php
+$prixUnitaire = 8.67;
+$quantite = 6;
+$tauxTVA = 0.2;
+$montant = $prixUnitaire * $quantite * ($tauxTVA + 1);
 
-
+echo "Prix unitaire de l'article : $prixUnitaire €<br>";
+echo "Quantité : $quantite<br>";
+echo "Taux de TVA : $tauxTVA<br>";
+echo "Le montant de la facture à régler est de : $montant €";
 
 ?>
