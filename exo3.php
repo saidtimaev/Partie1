@@ -9,11 +9,10 @@
 
 
 <?php
-  $phrase1 = "Notre formation DL commence aujourd’hui<br>";
-  $phrase2 = "Notre formation DL commence aujourd’hui";
+  $phrase1 = "Notre formation DL commence aujourd'hui";
 
-  echo $phrase1;
-  echo str_replace("aujourd'hui", "demain", $phrase2);
+  echo $phrase1."<br>";
+  echo str_replace("aujourd'hui", "demain", $phrase1);
 ?>
 
 
