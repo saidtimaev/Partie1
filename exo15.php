@@ -16,10 +16,10 @@ $p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17") ;<br>
 
 class Personne {
 
-    public $_nom;
-    public $_prenom;
-    public $_dateNaissance;
-    public $_age;
+    private $_nom;
+    private $_prenom;
+    private $_dateNaissance;
+    private $_age;
 
     function __construct($nom, $prenom, $dateNaissance) {
         $this->_nom = $nom;
