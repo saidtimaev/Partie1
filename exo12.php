@@ -13,7 +13,25 @@ Exemple : tableau ➔ Mickaël -> FRA, Virgile -> ESP, Marie-Claire -> ENG <br>
 
 <?php
 
-$prenomLangues = array("Zoe"=>"FRA", "Jose"=>"ESP", "Andrew"=>"ENG");
+$prenomLangues = [
+    "Zoe"=>"FRA", 
+    "Jose"=>"ESP", 
+    "Andrew"=>"ENG"
+];
+
+$salutations = [
+    "FRA" => "Salut",
+    "ESP" => "Hola",
+    'ENG' => "Hello"
+];
+
+foreach ($prenomLangues as $prenom => $langue) {
+    if(in_array($langue, array_keys($salutations))) {
+        echo $salutations[$langue]." ".$prenom;
+    } else {
+        echo "Langue pas gérée";
+    }
+}
 
 
 foreach ($prenomLangues as $prenom => $langue) {

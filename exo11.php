@@ -13,15 +13,16 @@ Exemple : tableau ➔ « Peugeot », « Renault », « BMW », « Mercedes »<br
 
 <?php
 
-$marqueVoiture = array("Peugeot", "BMW", "Renault", "Mercedes", "Toyota");
+$marqueVoiture = ["Peugeot", "BMW", "Renault", "Mercedes", "Toyota"];
 
 $nombreMarques = count($marqueVoiture);
 
 echo "Il y a $nombreMarques marques de voitures dans le tableau : <br><br>";
 
-
+echo "<ul>";
 foreach ($marqueVoiture as $marque) {
-  echo " - $marque <br>";
+  echo "<li>$marque</li>";
 }
+echo "</ul>";
 
 ?>

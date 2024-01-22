@@ -15,20 +15,19 @@ $p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17") ;<br>
 <?php
 
 class Personne {
-
-    private $_nom;
-    private $_prenom;
-    private $_dateNaissance;
-    private $_age;
-
-    function __construct($nom, $prenom, $dateNaissance) {
+    
+    private string $_nom;
+    private string $_prenom;
+    private DateTime $_dateNaissance;
+    
+    function __construct(string $nom, string $prenom, string $dateNaissance) {
         $this->_nom = $nom;
         $this->_prenom = $prenom;
         // On définit que l'attribut dateNaissance est une date pour lequel on pourra utiliser comme paramètre une chaîne de caractères
-        $this->_dateNaissance = new DateTime($dateNaissance);
+        $this->_dateNaissance = new DateTime($dateNaissance); 
     }
-
-
+    
+    
     
 
 // On crée la méthode donnerAge qui nous permettra de calculer et d'afficher l'âge de la personne
@@ -40,10 +39,10 @@ class Personne {
 
         // On definit l'attribut age de l'objet pour lequel on appelle la méthode 
         // On appelle la méthode diff() sur l'objet $dateCourante avec comme paramètre l'attribut _dateNaissance de l'objet sur lequel on appelle la méthode
-        $this->_age = $dateCourante->diff($this->_dateNaissance); 
+        $age = $dateCourante->diff($this->_dateNaissance); 
 
-        // On retourne la valeur de l'attribut age de l'objet sur lequel on a appelé la methode avec comme format l'année
-        return $this->_age->y;
+        // On retourne la valeur de la variable age de l'objet sur lequel on a appelé la methode avec comme format l'année
+        return $age->y." ans<br>";
        
 
     }
@@ -51,14 +50,14 @@ class Personne {
     // On utilise la méthode magique __toString() qui va nous simplifier l'affichage des informations demandées
     public function __toString() {
 
-        return $this->_prenom." ".$this->_nom." a ".$this->donnerAge()." ans<br>";
+        return $this->_prenom." ".$this->_nom." a ".$this->donnerAge();
 
     }
 
     /**
      * Get the value of _nom
      */ 
-    public function get_nom()
+    public function get_nom() : string
     {
         return $this->_nom;
     }
@@ -68,7 +67,7 @@ class Personne {
      *
      * @return  self
      */ 
-    public function set_nom($_nom)
+    public function set_nom(string $_nom)
     {
         $this->_nom = $_nom;
 
@@ -78,7 +77,7 @@ class Personne {
     /**
      * Get the value of _prenom
      */ 
-    public function get_prenom()
+    public function get_prenom() : string
     {
         return $this->_prenom;
     }
@@ -88,7 +87,7 @@ class Personne {
      *
      * @return  self
      */ 
-    public function set_prenom($_prenom)
+    public function set_prenom(string $_prenom)
     {
         $this->_prenom = $_prenom;
 
@@ -98,7 +97,7 @@ class Personne {
     /**
      * Get the value of _dateNaissance
      */ 
-    public function get_dateNaissance()
+    public function get_dateNaissance(): DateTime
     {
         return $this->_dateNaissance;
     }
@@ -115,33 +114,18 @@ class Personne {
         return $this;
     }
 
-    /**
-     * Get the value of _age
-     */ 
-    public function get_age()
-    {
-        return $this->_age;
-    }
-
-    /**
-     * Set the value of _age
-     *
-     * @return  self
-     */ 
-    public function set_age($_age)
-    {
-        $this->_age = $_age;
-
-        return $this;
-    }
 }
 
 // On crée 2 objets 
 $personne1 = new Personne("DUPONT", "Michel", "1980-02-19");
 $personne2 = new Personne("DUCHEMIN", "Alice", "1985-01-17");
+$personne2 = new Personne("DUCHEMIN", "Alice", "1985-01-17");
 
 // On affiche les informations des 2 objets 
 echo $personne1;
+echo $personne2;
+
+$personne2->set_nom($personne1->get_nom());
 echo $personne2;
 
 ?>

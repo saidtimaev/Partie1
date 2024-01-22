@@ -15,8 +15,13 @@ $dateNaissance = new DateTime("1985-01-17");
 
 $diff = $dateCourante->diff($dateNaissance); 
 
+// var_dump($diff);
+
 echo "Age de la personne : $diff->y ans ";
 echo "$diff->m mois ";
 echo "$diff->d jours";
+
+echo $diff->format("%Y ans %m mois %d jours");
+
 
 ?>

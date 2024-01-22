@@ -19,11 +19,13 @@ $moyenne = round($sommeNotes / $nbNotes, 2);
 
 echo "Les notes obtenues par l’élève sont : ";
 
-foreach ($notes as $note) {
+echo implode(" ", $notes);
 
-    echo "$note ";
+// foreach ($notes as $note) {
 
-}
+//     echo "$note ";
+
+// }
 
 echo "<br>Sa moyenne générale est donc de : $moyenne";
 

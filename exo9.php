@@ -19,6 +19,16 @@ $age = 21;
 echo "Age : $age<br>";
 echo "Sexe : $sexe<br>";
 
+$condition1 = $sexe == "F" && $age >=18 && $age <= 35;
+$condition2 = $sexe == "H" && $age > 20;
+
+
+if($condition1 || $condition2) {
+    echo "imposable";
+} else {
+    echo "non imposable";
+}
+
 
 if ($sexe == "F") {
 
