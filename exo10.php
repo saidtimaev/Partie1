@@ -22,6 +22,7 @@ echo "Reste à payer : $reste €<br>";
 echo "*********************<br>";
 echo "Rendu de monnaie :<br>";
 
+// floor() arrondit à l'entier inférieur
 $billetsDix = floor($reste / 10);
 $billetsCinq = floor(($reste % 10) / 5);
 $pieceDeux =  floor(($reste % 10 % 5) / 2);

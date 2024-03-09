@@ -9,6 +9,8 @@ Attention, la valeur générée devra être arrondie à 2 décimale
 <?php
 $montantFrancs = 75;
 $conversionEuro = 0.1524;
+
+//arrondit le montant a deux décimales prêt
 $resultat = round($montantFrancs * $conversionEuro,2);
 
 echo "Affichage :<br><br> Montant en francs : $montantFrancs<br>

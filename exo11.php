@@ -15,6 +15,7 @@ Exemple : tableau ➔ « Peugeot », « Renault », « BMW », « Mercedes »<br
 
 $marqueVoiture = ["Peugeot", "BMW", "Renault", "Mercedes", "Toyota"];
 
+// compte le nombre d'élements dans un tableau
 $nombreMarques = count($marqueVoiture);
 
 echo "Il y a $nombreMarques marques de voitures dans le tableau : <br><br>";

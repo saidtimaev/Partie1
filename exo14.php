@@ -13,6 +13,7 @@
 $dateCourante = new DateTime("2018-05-21");
 $dateNaissance = new DateTime("1985-01-17");
 
+// calcule la différence entre les deux dates
 $diff = $dateCourante->diff($dateNaissance); 
 
 // var_dump($diff);

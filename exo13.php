@@ -19,6 +19,7 @@ $moyenne = round($sommeNotes / $nbNotes, 2);
 
 echo "Les notes obtenues par l’élève sont : ";
 
+// implode() rassemble les éléments d'un tableau en une chaîne
 echo implode(" ", $notes);
 
 // foreach ($notes as $note) {

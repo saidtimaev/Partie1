@@ -8,6 +8,7 @@ contenus dans celle-ci.
 
 <?php
 $phrase = "Notre formation DL commence aujourd'hui";
+// str_word_count() permet de compter le nombre de mots dans une chaîne de caractères
 $nbMots = str_word_count($phrase);
 echo "La phrase « Notre formation DL commence aujourd'hui » contient $nbMots mots.";
 ?>

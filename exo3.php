@@ -12,6 +12,7 @@
   $phrase1 = "Notre formation DL commence aujourd'hui";
 
   echo $phrase1."<br>";
+  // str_replace permet de remplacer une chaîne de caractères par une autre
   echo str_replace("aujourd'hui", "demain", $phrase1);
 ?>
 

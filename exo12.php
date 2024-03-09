@@ -25,6 +25,8 @@ $salutations = [
     'ENG' => "Hello"
 ];
 
+// in_array() cherche une chaîne de caractères dans un tableau
+// array_keys() retourne les clés et les index d'un tableau
 foreach ($prenomLangues as $prenom => $langue) {
     if(in_array($langue, array_keys($salutations))) {
         echo $salutations[$langue]." ".$prenom;
